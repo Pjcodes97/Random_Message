@@ -18,7 +18,9 @@ const endLine = {
     'the greatest to ever do whatever it is that you do.',
     'the pilot of your life.',
     'the top lion of your pride.'
-    ]
+    ],
+    positiveFace: '(｡◕‿◕｡)',
+    negativeFace: '( ಠ ʖ̯ ಠ )',
 };
 
 //Randomize Functions
@@ -35,17 +37,20 @@ let baseSelect = Math.floor(Math.random() * 5);
 const messageCreator = (decider, bases) => {
     let randMessage = '';
 
-    if (bases < 3) {
+    if (bases < 3 && decider === 0) {
         let endSelect = endLine.categoryOne[Math.floor(Math.random() * 7)];
-        randMessage = baseLine[bases] + " " + endSelect;
+        randMessage = baseLine[bases] + " " + endSelect + " " + endLine.negativeFace;
+    } else if (bases < 3 && decider === 1) {
+        let endSelect = endLine.categoryOne[Math.floor(Math.random() * 7)];
+        randMessage = baseLine[bases] + " " + endSelect + " " + endLine.positiveFace;
     } else if (bases >= 3 && decider === 0) {                                 //This section modifies the category 2 outcomes to add a negative option to them, adding more randomization.
         let endSelect = endLine.catergoryTwo[Math.floor(Math.random() * 7)];
         baseLine[3] = 'You will NEVER be';
         baseLine[4] = 'You are NEVER';
-        randMessage = baseLine[bases] + " " + endSelect;
+        randMessage = baseLine[bases] + " " + endSelect + " " + endLine.negativeFace;
     } else if (bases >= 3 && decider === 1) {
         let endSelect = endLine.catergoryTwo[Math.floor(Math.random() * 7)];
-        randMessage = baseLine[bases] + " " + endSelect;
+        randMessage = baseLine[bases] + " " + endSelect + " " + endLine.positiveFace;
     };
     console.log(randMessage);
     return randMessage;
