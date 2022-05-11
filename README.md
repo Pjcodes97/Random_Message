@@ -22,3 +22,4 @@ The plan for this program is to eventually attach this javascript program to an 
 
 ## Updates
 * First pushed to GitHub -- **5/11/2022**
+* Fixed bug that printed negative face with positive message -- **5/11/2022**

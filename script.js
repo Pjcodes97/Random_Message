@@ -37,10 +37,10 @@ let baseSelect = Math.floor(Math.random() * 5);
 const messageCreator = (decider, bases) => {
     let randMessage = '';
 
-    if (bases < 3 && decider === 0) {
+    if (bases === 0) {
         let endSelect = endLine.categoryOne[Math.floor(Math.random() * 7)];
         randMessage = baseLine[bases] + " " + endSelect + " " + endLine.negativeFace;
-    } else if (bases < 3 && decider === 1) {
+    } else if (bases < 3 && bases !== 0) {
         let endSelect = endLine.categoryOne[Math.floor(Math.random() * 7)];
         randMessage = baseLine[bases] + " " + endSelect + " " + endLine.positiveFace;
     } else if (bases >= 3 && decider === 0) {                                 //This section modifies the category 2 outcomes to add a negative option to them, adding more randomization.
