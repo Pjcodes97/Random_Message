@@ -17,6 +17,21 @@ const endLine = {
     'the best.',
     'the greatest to ever do whatever it is that you do.',
     'the pilot of your life.',
-    'the top lion of your pride'
+    'the top lion of your pride.'
     ]
 };
+
+//Randomize Functions
+
+// Decides whether or not a category 2 message will be negative or positive, 0 = negative, 1 = positive
+let negOrPos = Math.floor(Math.random() * 2);
+console.log(negOrPos);
+
+//Decides which baseLine to use
+let baseSelect = Math.floor(Math.random() * 5);
+
+const messageCreator = (decider, bases) => {
+    
+}
+
+
