@@ -25,33 +25,32 @@ const endLine = {
 
 // Decides whether or not a category 2 message will be negative or positive, 0 = negative, 1 = positive
 let negOrPos = Math.floor(Math.random() * 2);
-console.log(negOrPos);
+
 
 //Decides which baseLine to use
 let baseSelect = Math.floor(Math.random() * 5);
-console.log(baseSelect);
+
 
 //Creates random message using variables created so far.
 const messageCreator = (decider, bases) => {
     let randMessage = '';
+
     if (bases < 3) {
         let endSelect = endLine.categoryOne[Math.floor(Math.random() * 7)];
-        console.log(endSelect)
         randMessage = baseLine[bases] + " " + endSelect;
     } else if (bases >= 3 && decider === 0) {                                 //This section modifies the category 2 outcomes to add a negative option to them, adding more randomization.
         let endSelect = endLine.catergoryTwo[Math.floor(Math.random() * 7)];
-        console.log(endSelect);
         baseLine[3] = 'You will NEVER be';
         baseLine[4] = 'You are NEVER';
         randMessage = baseLine[bases] + " " + endSelect;
     } else if (bases >= 3 && decider === 1) {
         let endSelect = endLine.catergoryTwo[Math.floor(Math.random() * 7)];
-        console.log(endSelect);
         randMessage = baseLine[bases] + " " + endSelect;
     };
+    console.log(randMessage);
     return randMessage;
 };
 
-console.log(messageCreator(negOrPos, baseSelect));
+(messageCreator(negOrPos, baseSelect));
 
 
