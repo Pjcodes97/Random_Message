@@ -52,10 +52,16 @@ const messageCreator = (decider, bases) => {
         let endSelect = endLine.catergoryTwo[Math.floor(Math.random() * 7)];
         randMessage = baseLine[bases] + " " + endSelect + " " + endLine.positiveFace;
     };
-    console.log(randMessage);
+    //console.log(randMessage);
     return randMessage;
 };
 
-(messageCreator(negOrPos, baseSelect));
+ //(messageCreator(negOrPos, baseSelect));
+
+let targetButton = document.getElementById('motivebutton');
+
+targetButton.onclick = function changeContent() {
+    document.getElementById('motivebox').innerHTML = messageCreator(negOrPos, baseSelect);
+}
 
 
