@@ -43,6 +43,8 @@ const messageCreator = () => {
         randMessage = baseLine[bases] + " " + endSelect + " " + endLine.negativeFace;
     } else if (bases >= 3 && decider === 1) {
         let endSelect = endLine.catergoryTwo[Math.floor(Math.random() * 7)];
+        baseLine[3] = 'You will be';
+        baseLine[4] = 'You are';
         randMessage = baseLine[bases] + " " + endSelect + " " + endLine.positiveFace;
     };
     //console.log(randMessage);
