@@ -15,7 +15,7 @@ const endLine = {
     'the only one who controls your destiny.',
     'the one with ALL the cards.',
     'the best.',
-    'the greatest to ever do whatever it is that you do.',
+    'the greatest.',
     'the pilot of your life.',
     'the top lion of your pride.'
     ],
