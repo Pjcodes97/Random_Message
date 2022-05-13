@@ -28,3 +28,4 @@ The plan for this program is to eventually attach this javascript program to an 
 * Added entire webpage to demonstrate function including but not limited to: html base (index.html), most major styling adjustments(style.css), and connecting the script to
   the web page -- **5/12/2022**
 * Fixed bug created with new "onclick" function, more css styling **5/12/2022**
+* Added webpage responsiveness **5/12/2022**

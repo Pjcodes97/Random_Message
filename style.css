@@ -3,13 +3,20 @@
 html, body {
     min-height: 100%;
     box-sizing: border-box;
+    font-size: 16px;
 }
 
 body {
     text-align: center;
-    font-size: 16px;
     font-family: 'Roboto Mono', monospace;
     background-image: linear-gradient(to right bottom, #7842d1, #694edb, #5658e3, #3d61eb, #006af2);
+}
+
+@media screen and (max-width: 475px) {
+    html {
+        font-size: 10px;
+    }
+
 }
 
 /* Header Section */
@@ -77,5 +84,11 @@ h2 {
     margin: auto;
     margin-bottom: 3rem;
     padding: 1rem;
+}
+
+@media only screen and (max-width: 390px) {
+    #motivebox {
+        font-size: 2.125rem;
+    }
 }
 
