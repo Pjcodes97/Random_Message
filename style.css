@@ -1,0 +1,81 @@
+
+/* lets body and background gradient fill whole screen */
+html, body {
+    min-height: 100%;
+    box-sizing: border-box;
+}
+
+body {
+    text-align: center;
+    font-size: 16px;
+    font-family: 'Roboto Mono', monospace;
+    background-image: linear-gradient(to right bottom, #7842d1, #694edb, #5658e3, #3d61eb, #006af2);
+}
+
+/* Header Section */
+header {
+    font-size: 1.75rem;
+    color: white;
+    text-shadow: 3px 3px 2px gray;
+    width: 75%;
+    margin: auto;
+    margin-bottom: 4rem;
+}
+
+header h1 {
+    margin-bottom: 0;
+}
+
+header p {
+    margin-top: 0;
+}
+
+/* SubHeader */
+
+h2 {
+    padding-bottom: 1rem;
+    color: white;
+    text-shadow: 3px 3px 2px gray;
+    font-size: 1.15rem;
+    margin-bottom:4rem;
+}
+
+/* Button and Hover Styling */
+
+#motivebutton {
+    padding: 1rem;
+    background-color: #B39CD0;
+    border: 0;
+    border-radius: 40px;
+    color: white;
+    font-size: 1rem;
+    font-weight:bolder;
+    box-shadow: 10px 10px 14px 1px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.5s;
+}
+
+#motivebutton:hover {
+    box-shadow: none;
+    transition: box-shadow 0.5s;
+}
+
+#motivebutton:active {
+   margin-top: 0.125rem;
+}
+
+
+/* Appearing Text Box */
+
+#motivebox {
+    min-height: 5rem;
+    font-family: 'Acme', sans-serif;
+    font-size: 2.75rem;
+    background-color: white;
+    box-shadow: 5px 5px 15px 2px rgb(0 0 0 / 60%);
+    border-radius: 30px;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 3rem;
+    padding: 1rem;
+}
+

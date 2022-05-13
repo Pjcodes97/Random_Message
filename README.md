@@ -16,6 +16,8 @@ The plan for this program is to eventually attach this javascript program to an 
 6. String Concatenation
 7. Demonstration of using Comments to explain steps inside of script itself
 8. Use of Git 
+9. Creating basic html template and styling using css **Update from 5/12/2022**
+10. Connecting JS scripts to the webpage via events **Update from 5/12/2022**
 
 ## Collaborators
 * [Pjcodes97](https://github.com/Pjcodes97)
@@ -23,3 +25,6 @@ The plan for this program is to eventually attach this javascript program to an 
 ## Updates
 * First pushed to GitHub -- **5/11/2022**
 * Fixed bug that printed negative face with positive message -- **5/11/2022**
+* Added entire webpage to demonstrate function including but not limited to: html base (index.html), most major styling adjustments(style.css), and connecting the script to
+  the web page -- **5/12/2022**
+* Fixed bug created with new "onclick" function, more css styling **5/12/2022**

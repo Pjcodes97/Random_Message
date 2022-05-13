@@ -15,7 +15,7 @@ const endLine = {
     'the only one who controls your destiny.',
     'the one with ALL the cards.',
     'the best.',
-    'the greatest to ever do whatever it is that you do.',
+    'the greatest.',
     'the pilot of your life.',
     'the top lion of your pride.'
     ],
@@ -25,18 +25,11 @@ const endLine = {
 
 //Randomize Functions
 
-// Decides whether or not a category 2 message will be negative or positive, 0 = negative, 1 = positive
-let negOrPos = Math.floor(Math.random() * 2);
-
-
-//Decides which baseLine to use
-let baseSelect = Math.floor(Math.random() * 5);
-
-
 //Creates random message using variables created so far.
-const messageCreator = (decider, bases) => {
+const messageCreator = () => {
     let randMessage = '';
-
+    let decider = Math.floor(Math.random() * 2); //Decides whether random message will be positive or negative
+    let bases = Math.floor(Math.random() * 5); //Decides which base part will be used for the random message
     if (bases === 0) {
         let endSelect = endLine.categoryOne[Math.floor(Math.random() * 7)];
         randMessage = baseLine[bases] + " " + endSelect + " " + endLine.negativeFace;
@@ -50,12 +43,20 @@ const messageCreator = (decider, bases) => {
         randMessage = baseLine[bases] + " " + endSelect + " " + endLine.negativeFace;
     } else if (bases >= 3 && decider === 1) {
         let endSelect = endLine.catergoryTwo[Math.floor(Math.random() * 7)];
+        baseLine[3] = 'You will be';
+        baseLine[4] = 'You are';
         randMessage = baseLine[bases] + " " + endSelect + " " + endLine.positiveFace;
     };
-    console.log(randMessage);
+    //console.log(randMessage);
     return randMessage;
 };
 
-(messageCreator(negOrPos, baseSelect));
+ //(messageCreator(negOrPos, baseSelect));
+
+let targetButton = document.getElementById('motivebutton');
+
+targetButton.onclick = function changeContent() {
+    document.getElementById('motivebox').innerHTML = messageCreator();
+}
 
 
